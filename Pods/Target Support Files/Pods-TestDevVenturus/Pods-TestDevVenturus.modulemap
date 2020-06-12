@@ -1,0 +1,6 @@
+framework module Pods_TestDevVenturus {
+  umbrella header "Pods-TestDevVenturus-umbrella.h"
+
+  export *
+  module * { export * }
+}
