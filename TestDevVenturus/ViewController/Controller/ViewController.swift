@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     // MARK: Methods
     func loadRequest() {
         
-        vm.getRequest { (success) in
+        vm.getRequest { [weak self](success) in
             if success {
-                self.collectionView.reloadData()
+                self?.collectionView.reloadData()
             }
         }
     }

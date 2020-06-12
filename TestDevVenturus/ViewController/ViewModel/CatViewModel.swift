@@ -14,9 +14,9 @@ class CatViewModel {
     var cat: [DataCat]?
     
     func getRequest(completion: @escaping (Bool) -> Void){
-        request.loadCats { (model, sucess) in
+        request.loadCats {[weak self] (model, sucess) in
             if sucess{
-                self.cat = model
+                self?.cat = model
                 completion(true)
             }
         }
